@@ -18,67 +18,79 @@
     </div>
   </div>
   <div>
-    <h2>You have Configured a MEAN stack application </h2>
+    <h2>Discover more about our company and intiatives here</h2>
     <p> commercetools Inc. is taking MEAN apps to the next level</p>
     <p>This application stores users and articles and could be used for our blog </p>
     <ul>
       <li>
-        Click
-        <em>Sign Up</em> to get started.
+        Learn about how we architect apps better
       </li>
       <li>
-        Configure your app to work with your social accounts, by editing the
-        <em>/config/env/*.js</em> files.
+        Find new commerce strategies that may suite your business
       </li>
       <li>
-        Edit your users module.
+        Get updates on the platform and features
       </li>
       <li>
-        Add new CRUD modules.
+        See what life working for commercetools is like
       </li>
       <li>
         Have fun...
       </li>
     </ul>
   </div>
+  <section ng-controller="ArticlesController" ng-init="find()">
+    <div class="page-header">
+      <h1>Articles</h1>
+    </div>
+    <div class="list-group">
+      <a ng-repeat="article in articles" ui-sref="articles.view({articleId: article._id})" class="list-group-item">
+        <small class="list-group-item-text">
+          Posted on
+          <span ng-bind="article.created | date:'mediumDate'"></span>
+          by
+          <span ng-bind="article.user.displayName"></span>
+        </small>
+        <h4 class="list-group-item-heading" ng-bind="article.title"></h4>
+        <p class="list-group-item-text" ng-bind="article.content"></p>
+      </a>
+    </div>
+    <div class="alert alert-warning text-center" ng-if="articles.$resolved && !articles.length">
+      No articles yet, why don't you <a ui-sref="articles.create">create one</a>?
+    </div>
+  </section>
   <div class="row">
-    <div class="col-md-3">
-      <h2><strong>M</strong>ongoDB</h2>
-      <p><a target="_blank" href="http://mongodb.org/">MongoDB</a> is a NoSQL database. MongoDB's <a target="_blank" href="http://docs.mongodb.org/manual/">great manual</a> is the place to get started with NoSQL and MongoDB.</p>
+    <div class="col-md-6">
+      <h2><strong>Microservices</strong></h2>
+      <p>We use small customizable apps and avoid monolithic architechture <br> </p>
+      <br>
     </div>
-    <div class="col-md-3">
-      <h2><strong>E</strong>xpress</h2>
-      <p><a target="_blank" href="http://expressjs.com/"> Express</a> is a NodeJS server-side application web framework. Check out <a target="_blank" href="http://expressjs.com/4x/api.html">The ExpressJS API reference for more information</a> or <a target="_blank" href="http://stackoverflow.com/questions/8144214/learning-express-for-node-js">StackOverflow</a> for more info.</p>
-    </div>
-    <div class="col-md-3">
-      <h2><strong>A</strong>ngularJS</h2>
-      <p><a target="_blank" href="http://angularjs.org/">AngularJS</a> is client-side web application framework. The <a target="_blank" href="http://www.thinkster.io/">Thinkster Popular Guide</a> and <a target="_blank" href="https://egghead.io/">Egghead Videos</a> are great resources.</p>
-    </div>
-    <div class="col-md-3">
-      <h2><strong>N</strong>ode.js</h2>
-      <p><a target="_blank" href="http://nodejs.org/">Node.js</a> is a JavaScript run-time, popular for being a web server platform. Node's website and this <a target="_blank" href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js">stackOverflow thread</a> offer excellent starting points to get to grasps with node.</p>
+    <div class="col-md-6">
+      <h2><strong>Omnichannel</strong></h2>
+      <p> We want to reach your customers on all channels <br> </p>
+      <br>
     </div>
   </div>
   <div class="well">
-    <h2>MEAN.JS Documentation</h2>
+    <h2>Partners and Links</h2>
     <p>
-      Once you're familiar with the foundation technology, check out the MEAN.JS Documentation:
+      We work with many great customers and partners to utlize the platform and create revolutionary e-commerce sites
       <ul>
-        <li><a target="_blank" href="http://meanjs.org/docs.html">MEAN.JS Documentation</a>
+        <li><a target="_blank" href="http://www.devgurus.io/">Devgurus</a>
         </li>
         <!-- <li><a target="_blank" href="http://meanjs.org/generator.html">Yeoman Generator</a>
 				</li> -->
-        <li><a target="_blank" href="http://meanjs.org/modules.html">Modules</a>
+        <li><a target="_blank" href="https://www.us-elitegear.com/">U.S. Elite</a>
         </li>
-        <li><a target="_blank" href="http://meanjs.org/changelog.html">Changelog</a>
+        <li><a target="_blank" href="https://www.bluestarnutraceuticals.com/">Bluestar</a>
         </li>
-        <li><a target="_blank" href="http://meanjs.org/community.html">Community</a>
+        <li><a target="_blank" href="https://www.loomstate.org/">Loomstate</a>
         </li>
-        <li><a target="_blank" href="http://blog.meanjs.org">Blog</a>
+        <li><a target="_blank" href="http://therenewalworkshop.com/">Renewal Workshop</a>
         </li>
       </ul>
     </p>
   </div>
-  <br>Enjoy &amp; Keep Us Updated,
-  <br>The MEAN.JS Team.
+  <br> Thanks for visiting!
+  <br> The commercetools Inc. Team
 </section>

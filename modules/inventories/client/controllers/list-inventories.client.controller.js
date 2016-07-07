@@ -8,7 +8,7 @@
 
 
   var inventories = angular.module('inventories');
-  
+
   angular
     .module('inventories')
     .controller('InventoriesListController', InventoriesListController);

@@ -3,11 +3,19 @@
     <h1>Inventories</h1>
   </div>
   <div class="stock">
-    Something About Stocks
-    
+    <strong> Inventory by Product </strong>
+    <br>
+    <!-- {{inventory}} -->
   </div>
 
-  <div class="list-group">
+  <div class="list-group" ng-controller="InventoriesListController">
+     <li style="list-style-type:none;" ng-repeat="inventory in inventory">
+       <p class="stock-name"> Product SKU: {{inventory.sku}}, </p>
+       <p class="stock-quantity">Quantity in Stock: {{inventory.availableQuantity}} </p>
+     </li>
+   </div>
+
+  <!-- <div class="list-group">
     <a data-ng-repeat="inventory in vm.inventories"
        data-ui-sref="inventories.view({ inventoryId: inventory._id })"
        class="list-group-item">
@@ -20,7 +28,7 @@
       </small>
       <h4 class="list-group-item-heading" data-ng-bind="inventory.name"></h4>
     </a>
-  </div>
+  </div> -->
   <div class="alert alert-warning text-center" data-ng-if="vm.inventories.$resolved && !vm.inventories.length">
     No Inventories yet, why don't you <a data-ui-sref="inventories.create">create one</a>?
   </div>

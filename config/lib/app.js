@@ -1,6 +1,6 @@
 'use strict';
 
-var mongoUri = process.env.MONGOLAB_URI ||process.env.MONGOHQ_URL || 'mongodb://heroku_l1wmh2pn:1sceqvuad5eghbrbevodtqtikg@ds017195.mlab.com:17195/heroku_l1wmh2pn';
+// var mongoUri = process.env.MONGOLAB_URI ||process.env.MONGOHQ_URL || 'mongodb://heroku_l1wmh2pn:1sceqvuad5eghbrbevodtqtikg@ds017195.mlab.com:17195/heroku_l1wmh2pn';
 /**
  * Module dependencies.
  */

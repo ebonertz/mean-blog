@@ -11,8 +11,8 @@ module.exports = {
     uri: process.env.MONGOHQ_URL|| process.env.MONGOLAB_URI || 'mongodb://ctblog:ctblog1@ds017195.mlab.com:17195/heroku_l1wmh2pn'
 ,
     options: {
-      user: 'heroku_l1wmh2pn',
-      pass: '1sceqvuad5eghbrbevodtqtikg'
+      user: 'ctblog',
+      pass: 'ctblog1'
     },
     // Enable mongoose debug mode
     debug: process.env.MONGODB_DEBUG || false
@@ -36,6 +36,28 @@ module.exports = {
       }
     }
   },
+  assets: {
+      lib: {
+
+        css: [
+          'public/lib/bootstrap/dist/css/bootstrap.min.css',
+          'public/lib/bootstrap/dist/css/bootstrap.min.css',
+        ],
+        js: [
+          'public/lib/angular/angular.min.js',
+          'public/lib/angular-resource/angular-resource.js',
+          'public/lib/angular/angular-cookies/angular-cookies.js',
+          'public/lib/angular/angular-animate/angular-animate.js',
+          'public/lib/angular/angular-touch/angular-touch.js',
+          'public/lib/angular/angular-sanitize/angularsanitize.js',
+          'public/lib/angular/angular-ui-router/release/angular-uirouter.min.js',
+          'public/lib/angular/angular-ui-utils/ui-utils.min.js',
+          'public/lib/angular/angular-bootstrap/ui-bootstrap-tpls.min.js'
+        ],
+      },
+        css: 'public/dist/application.min.css',
+        js: 'public/dist/application.min.js'
+      },
   facebook: {
     clientID: process.env.FACEBOOK_ID || 'APP_ID',
     clientSecret: process.env.FACEBOOK_SECRET || 'APP_SECRET',

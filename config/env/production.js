@@ -11,8 +11,8 @@ module.exports = {
     uri: process.env.MONGOHQ_URL|| process.env.MONGOLAB_URI || 'mongodb://ctblog:ctblog1@ds017195.mlab.com:17195/heroku_l1wmh2pn'
 ,
     options: {
-      user: 'ctblog',
-      pass: 'ctblog1'
+      user: 'heroku_l1wmh2pn',
+      pass: '1sceqvuad5eghbrbevodtqtikg'
     },
     // Enable mongoose debug mode
     debug: process.env.MONGODB_DEBUG || false

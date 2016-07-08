@@ -41,7 +41,7 @@ module.exports = {
 
         css: [
           'public/lib/bootstrap/dist/css/bootstrap.min.css',
-          'public/lib/bootstrap/dist/css/bootstrap.min.css',
+          'public/lib/bootstrap/dist/css/bootstrap.min.css'
         ],
         js: [
           'public/lib/angular/angular.min.js',
@@ -53,7 +53,7 @@ module.exports = {
           'public/lib/angular/angular-ui-router/release/angular-uirouter.min.js',
           'public/lib/angular/angular-ui-utils/ui-utils.min.js',
           'public/lib/angular/angular-bootstrap/ui-bootstrap-tpls.min.js'
-        ],
+        ]
       },
         css: 'public/dist/application.min.css',
         js: 'public/dist/application.min.js'
